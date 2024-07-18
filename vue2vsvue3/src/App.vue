@@ -1,18 +1,18 @@
 <template>
    <div :id="'app ' + secilenFiltre1.toLowerCase()" :class="secilenFiltre1.toLowerCase()">
-    <!-- Başlık -->
+    
     <b-container>
       <b-row class="header">
         <b-col>
           <h1 @click="toggleFilters">Dytown Giyim</h1>
         </b-col>
-        <!-- Grafikleri Göster/Gizle Butonu -->
+        
         <b-col class="toggle-button">
           <b-button @click="toggleCharts" variant="primary">{{ chartsVisible ? 'Grafikleri Gizle' : 'Grafikleri Göster' }}</b-button>
         </b-col>
       </b-row>
 
-      <!-- Filtreler -->
+      
       <b-row>
         <b-col>
           <b-card v-if="showFilters" class="filters-card">
@@ -31,7 +31,7 @@
         </b-col>
       </b-row>
 
-      <!-- Seçili İçerik ve Ürün Resmi -->
+     
       <b-row>
         <b-col>
           <b-card v-if="secilenFiltre1 && secilenFiltre2" class="selected-content-card">
@@ -51,7 +51,7 @@
         </b-col>
       </b-row>
 
-      <!-- Grafikler Bölümü (koşullu olarak görüntülenir) -->
+    
       <b-row v-if="chartsVisible">
         <b-col>
           <b-card class="chart-card">
@@ -74,7 +74,7 @@
         </b-col>
       </b-row>
 
-      <!-- Sepet İkonu ve İçeriği -->
+      
       <div class="cart-container">
         <b-dropdown v-model="cartDropdownOpen" right>
           <template v-slot:button-content>
@@ -94,7 +94,7 @@
         </b-dropdown>
       </div>
 
-      <!-- Tablo Componenti -->
+      
       <b-row>
         <b-col>
           <b-card class="table-card">
@@ -190,11 +190,11 @@ export default {
           }
         }
       },
-      pieChartSeries: [44, 55], // Erkek, Kadın satış miktarları
-      chartsVisible: true, // Başlangıçta grafikleri göster
-      showFilters: false, // Başlangıçta filtreleri gizle
-      sepettekiUrunler: [], // Sepetteki ürünler
-      cartDropdownOpen: false // Sepet dropdown açık/kapalı durumu
+      pieChartSeries: [44, 55], 
+      chartsVisible: true, 
+      showFilters: false, 
+      sepettekiUrunler: [], 
+      cartDropdownOpen: false 
     };
   },
   methods: {
@@ -359,7 +359,7 @@ export default {
 
 
 <style scoped>
-/* Başlık ve Butonlar */
+
 .header {
   margin-bottom: 20px;
   display: flex;
@@ -369,17 +369,17 @@ export default {
 
 .toggle-button {
   justify-content: flex-start;
-  margin-right: auto; /* Sağ tarafa doğru genişletmek için */
+  margin-right: auto; 
 }
 
 .toggle-button .b-button {
-  margin-right: 10px; /* Düğmeye sağdan boşluk ekle */
+  margin-right: 10px; 
 }
 
-/* Filtre Kartı */
+
 .filters-card {
   margin-bottom: 20px;
-  background-color: #f5f5f5; /* Filtre kartı arkaplan rengi */
+  background-color: #f5f5f5; 
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -395,41 +395,41 @@ export default {
   margin-right: 10px;
 }
 
-/* Seçili İçerik Kartı */
+
 .selected-content-card {
   margin-bottom: 20px;
   padding: 15px;
-  background-color: #ffffff; /* Seçili içerik kartı arkaplan rengi */
+  background-color: #ffffff; 
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center; /* İçeriği merkezlemek için */
+  text-align: center; 
 }
 
 .urun-resimleri {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Ürün resimlerini ortalamak için */
+  justify-content: center;
 }
 
 .urun {
-  flex: 0 0 calc(25% - 20px); /* Ürün kartlarının genişliği */
+  flex: 0 0 calc(25% - 20px); 
   text-align: center;
   margin: 20px;
   padding: 30px;
-  background-color: #f0f0f0; /* Ürün kartının arkaplan rengi */
+  background-color: #f0f0f0; 
   border-radius: 8px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölgelendirme */
-  position: relative; /* Pozisyonu belirle */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative; 
 }
 
 .urun-resmi {
   width: 100%;
   height: auto;
-  border-radius: 8px; /* Ürün resimleri için köşe yuvarlama */
+  border-radius: 8px; 
 }
 
 .urun-bilgisi {
-  margin-top: 10px; /* Bilgilerin üst boşluğu */
+  margin-top: 10px; 
 }
 
 .urun-fiyat {
@@ -437,13 +437,13 @@ export default {
 }
 
 .add-to-cart-button {
-  width: calc(100% - 20px); /* Genişlik hesaplaması */
-  position: absolute; /* Mutlak pozisyon */
-  bottom: 10px; /* Alt boşluk */
-  left: 10px; /* Sol boşluk */
+  width: calc(100% - 20px); 
+  position: absolute; 
+  bottom: 10px; 
+  left: 10px; 
 }
 
-/* Sepet İkon ve İçerik */
+
 .cart-container {
   position: fixed;
   top: 20px;
@@ -455,7 +455,7 @@ export default {
   width: 50px;
   height: auto;
   margin-right: 10px;
-  border-radius: 8px; /* Sepet öğe resimleri için köşe yuvarlama */
+  border-radius: 8px; 
 }
 
 .badge {
@@ -469,25 +469,25 @@ export default {
   border-radius: 50%;
 }
 
-/* Tablo Kartı */
+
 .table-card {
   margin-top: 20px;
   padding: 15px;
-  background-color: #ffffff; /* Tablo kartı arkaplan rengi */
+  background-color: #ffffff; 
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Grafik Kartları */
+
 .chart-card {
   margin-top: 20px;
   padding: 15px;
-  background-color: #ffffff; /* Grafik kartı arkaplan rengi */
+  background-color: #ffffff; 
   border-radius: 8px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Sepet dropdown butonu */
+
 .b-dropdown-toggle {
   display: flex;
   align-items: center;
@@ -498,10 +498,10 @@ export default {
 }
 
 .erkek {
-  background-color: #cce6ff; /* Light blue for 'Erkek' */
+  background-color: #cce6ff; 
 }
 
 .kadın {
-  background-color: #ffcce6; /* Light pink for 'Kadın' */
+  background-color: #ffcce6; 
 }
 </style>
