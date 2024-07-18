@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İsim Soyisim Tablosu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="sidebar" id="sidebar">
+            <ul>
+                <li><a href="index.html">Ana Sayfa</a></li>
+                <li><a href="story.html">Hikaye</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <header>
+                <span class="menu-icon" id="menuIcon">&#9776;</span>
+            </header>
+            <main>
+                <h1>İsim Soyisim Girişi</h1>
+                <form id="nameForm">
+                    <label for="firstName">İsim:</label>
+                    <input type="text" id="firstName" name="firstName" required>
+                    <br>
+                    <label for="lastName">Soyisim:</label>
+                    <input type="text" id="lastName" name="lastName" required>
+                    <br>
+                    <button type="submit">Ekle</button>
+                </form>
+                <h2>İsim Soyisim Tablosu</h2>
+                <table id="nameTable" border="1">
+                    <thead>
+                        <tr>
+                            <th>İsim</th>
+                            <th>Soyisim</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- İsim ve soyisimler buraya eklenecek -->
+                    </tbody>
+                </table>
+            </main>
+        </div>
+    </div>
+    <script src="/bura/js/app.js"></script>
+</body>
+</html>
