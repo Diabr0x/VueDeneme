@@ -12,9 +12,9 @@ export default {
   data() {
     return {
       hikayeler: [
-        { id: 1, name: "Semih", güc: 75 },
-        { id: 2, name: "Rashica", güc: 65 },
-        { id: 3, name: "Demir", güc: 60 }
+        { id: 1, name: "Dytown Giriş", sayfa: 15 },
+        { id: 2, name: "Dytown Gelişme", sayfa: 35 },
+        { id: 3, name: "Dytown Sonuç", sayfa: 60 }
       ]
     };
   }
